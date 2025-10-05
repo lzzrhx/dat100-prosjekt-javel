@@ -4,12 +4,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>no.hvl.dat100.prosjekt</groupId>
-    <artifactId>javel-prosjekt</artifactId>
+    <groupId>no.hvl.dat100</groupId>
+    <artifactId>javel</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.release>23</maven.compiler.release>
+        <maven.compiler.release>24</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <mainClass>no.hvl.dat100.javel.oppgave2.MonthMain</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>

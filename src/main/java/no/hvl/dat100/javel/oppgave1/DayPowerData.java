@@ -3,7 +3,7 @@ package no.hvl.dat100.javel.oppgave1;
 public class DayPowerData {
 
     // power usage for one day - one entry per hour
-    public static double[] powerusage_day = {
+    public static double[] usageDay = {
 
             0.34, 0.29, 0.31, 0.45, 0.41, 0.38,
             2.12, 1.87, 2.03, 1.01, 0.95, 0.89,
@@ -12,7 +12,7 @@ public class DayPowerData {
     };
 
     // power price for one day - one entry per hour
-    public static double[] powerprices_day = {
+    public static double[] pricesDay = {
 
             0.1, 0.2, 0.3, 0.4, 0.5, 0.6,
             0.7, 0.8, 1.9, 1.0, 1.1, 1.2,
