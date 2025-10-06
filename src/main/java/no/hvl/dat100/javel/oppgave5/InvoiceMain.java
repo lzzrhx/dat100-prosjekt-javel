@@ -11,6 +11,13 @@ public class InvoiceMain {
         System.out.println(" OPPGAVE 5");
         System.out.println("-------------------------------------------------------------------------------");
         System.out.println();
-        // TODO: ...
+        Customer c1 = new Customer("Navn Navnenavn", "epost@eksempel.com", PowerAgreementType.SPOTPRICE);
+        Customer c2 = new Customer("Ekse Mpel", "epost@eksempel.com", PowerAgreementType.POWERSUPPORT);
+        Customer c3 = new Customer("Lorem Ipsum", "epost@eksempel.com", PowerAgreementType.NORGESPRICE);
+        Invoice[] invoices = new Invoice[3];
+        invoices[0] = new Invoice(c1, "Januar", CustomerPowerUsageData.usage_month_customer1, MonthPowerData.pricesMonth);
+        invoices[1] = new Invoice(c3, "Januar", CustomerPowerUsageData.usage_month_customer2, MonthPowerData.pricesMonth);
+        invoices[2] = new Invoice(c2, "Januar", CustomerPowerUsageData.usage_month_customer3, MonthPowerData.pricesMonth);
+        Invoices.processInvoices(invoices);
     }
 }
