@@ -20,7 +20,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.5.1</version>
         <configuration>
-          <mainClass>no.hvl.dat100.javel.oppgave3.CustomerMain</mainClass>
+          <mainClass>no.hvl.dat100.javel.oppgave5.InvoiceMain</mainClass>
         </configuration>
       </plugin>
     </plugins>

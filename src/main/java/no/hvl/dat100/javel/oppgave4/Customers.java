@@ -6,63 +6,66 @@ public class Customers {
 
     private Customer[] customers;
 
-    // a) Complete constructor
+    // a)
     public Customers(int size) {
-
-        // TODO
-
+        customers = new Customer[size];
+        System.out.println("Kundetabell med størrelse " + size + " opprettet.");
     }
 
-    // b) count number of non-null references
+    // b)
     public int countNonNull() {
-
-
         int count = 0;
-
-        // TODO
-
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] != null) {
+                count++;
+            }
+        }
         return count;
     }
 
-    // c) return reference to customer with given id (if exists)
-    public Customer getCustomer(int customer_id) {
-
-        boolean funnet = false;
-        Customer c = null;
-
-        // TODO
-
-        return c;
+    // c)
+    public Customer getCustomer(int id) {
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] != null && customers[i].id() == id) {
+                return customers[i];
+            }
+        }
+        return null;
     }
 
-    // d) add a customer to the reference table
+    // d)
     public boolean addCustomer(Customer c) {
-
-        boolean inserted = false;
-
-        // TODO
-
-        return inserted;
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] == null) {
+                customers[i] = c;
+                return true;
+            }
+        }
+        return false;
     }
 
-    // e) remove customer with given id from reference table
-    public Customer removeCustomer(int customer_id) {
-
-        boolean deleted = false;
-        Customer c = null;
-
-        // TODO
-
-        return c;
+    // e)
+    public Customer removeCustomer(int id) {
+        for (int i  = 0; i < customers.length; i++) {
+            if (customers[i] != null && customers[i].id() == id) {
+                Customer c = customers[i];
+                customers[i] = null;
+                return c;
+            }
+        }
+        return null;
     }
 
-    // f) return reference table with all customers
+    // f)
     public Customer[] getCustomers() {
-
-        Customer[] customers = null;
-
-        // TODO
-
-        return customers;
+        Customer[] result = new Customer[countNonNull()];
+        int j = 0;
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] != null) {
+                result[j] = customers[i];
+                j++;
+            }
+        }
+        return result;
     }
 }

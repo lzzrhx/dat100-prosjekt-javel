@@ -7,13 +7,19 @@ public class Customer {
     private String email;
     private PowerAgreementType agreement;
 
+    public Customer(String name, String email, PowerAgreementType agreement, boolean verbose) {
+        this(name, email, agreement);
+        if (verbose) { 
+            System.out.println("Ny kunde lagt til:\n" + toString() + "\n");
+        }
+    }
+
     public Customer(String name, String email, PowerAgreementType agreement) {
         Customer.num++;
         this.id = Customer.num;
         name(name);
         email(email);
         agreement(agreement);
-        System.out.println("Ny kunde lagt til:\n" + toString() + "\n");
     }
 
     // Getter for id
